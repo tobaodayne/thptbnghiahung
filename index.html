@@ -68,3 +68,37 @@
     </script> -->
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cloud Animation</title>
+<style>
+ .cloud {
+    width: 400px;
+    height: 400px;
+    background-image: url('cloud.png'); /* Đường dẫn đến hình ảnh mây */
+    background-size: cover;
+    position: absolute;
+    top: 50px; /* Vị trí ban đầu của mây */
+    left: -20px; /* Khoảng cách ban đầu từ mép trái của sky */
+    animation: moveCloud linear infinite; /* Sử dụng animation với tên moveCloud, tốc độ đều và lặp vô hạn */
+  }
+
+  @keyframes moveCloud {
+    to {
+      left: 100%; /* Khi kết thúc animation, mây sẽ di chuyển đến phía bên phải ngoài cùng của sky */
+    }
+  }
+</style>
+</head>
+<body>
+<div class="sky">
+    <div class="cloud"></div>
+    <div class="cloud"></div>
+    <div class="cloud"></div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
